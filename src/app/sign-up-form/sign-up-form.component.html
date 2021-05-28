@@ -1,0 +1,52 @@
+<form novalidate (ngSubmit)="onFormSubmit(registrazione.form)" class="row g-3" #registrazione="ngForm">
+
+    <div class="mb-3 col-6">
+        <label for="exampleFormControlInput1" class="form-label">username</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+            [(ngModel)]="utente.userName" name="userName"  minlength="3"  #userName = 'ngModel'>
+    </div>
+
+    <div class="mb-3 col-6">
+        <label for="exampleFormControlInput1" class="form-label">email</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [(ngModel)]="utente.email" name="email" #email = 'ngModel'
+            required>
+    </div>
+
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+        <div *ngIf="email.errors?.required">
+            email non valida </div>
+        <div *ngIf="email.errors?.pattern && email.touched">
+            not god
+        </div>
+    </div>
+<div >
+    <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Password</label>
+        <input type="password" [(ngModel)]="utente.pwd" class="form-control" placeholder="Password"
+             name="pwd" #pwd = 'ngModel'>
+    </div>
+    <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Password confirm</label>
+        <input type="password" [(ngModel)]="utente.pwdConf" class="form-control" placeholder="Password"
+            name="pwdConf" #pwdConf = 'ngModel'>
+    </div>
+    <div *ngIf="(pwd.invalid || pwd != pwdConf) && (pwd.touched)">
+        <div *ngIf="pwd.invalid; else nomacth">
+            password deve avere almeno 8 caratteri
+        </div>
+        <ng-template #nomacth>
+            la password non corrisponde
+        </ng-template>
+    </div>
+    </div>
+    <input type="hidden" class="form-control"  
+            [(ngModel)]="utente.isAdmin" name="isAdmin" value="utente">
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3" [disabled]="!registrazione.form.valid" >Confirm identity</button>
+    </div>
+    <div class="col-auto">
+        <button type="reset" class="btn btn-primary mb-3">reset identity</button>
+    </div>
+</form>
+

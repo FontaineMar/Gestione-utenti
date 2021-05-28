@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Lista Libri</h1>
+
+    <table class="table table-success">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titolo</th>
+                <th scope="col">Autore</th>
+                <th scope="col">Genere</th>
+                <th scope="col">ISBN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listLibro.list">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.title}}</td>
+                <td>{{item.author}}</td>
+                <td>{{item.genre}}</td>
+                <td>{{item.isbn}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,156 @@
+{
+  "utenti": [
+    {
+      "id": 6,
+      "userName": "libro33",
+      "email": "sebastian@codingthesmartway.com",
+      "pwd": "asdf",
+      "pwdConf": "asdf",
+      "isAdmin": "amministratore"
+    },
+    {
+      "userName": "libro",
+      "email": "sebastian@codingthesmartway.com",
+      "pwd": "asdf",
+      "pwdConf": "asdf",
+      "isAdmin": "utente",
+      "id": 10
+    },
+    {
+      "userName": "libro",
+      "email": "sebastian@codingthesmartway.com",
+      "pwd": "asdf",
+      "pwdConf": "asdf",
+      "isAdmin": "utente",
+      "id": 114
+    },
+    {
+      "userName": "bibibibi",
+      "email": "odri.fo@gmail.com",
+      "password": {
+        "pwd": "1234",
+        "pwdConf": "1234"
+      },
+      "pwd": "1234",
+      "pwdConf": "1234",
+      "id": 19
+    },
+    {
+      "userName": "aaaaa",
+      "email": "marcofontaine91@hotmail.com",
+      "password": {
+        "pwd": "aaaa",
+        "pwdConf": "aaaa"
+      },
+      "pwd": "aaaa",
+      "pwdConf": "aaaa",
+      "id": 20
+    },
+    {
+      "userName": "eee",
+      "email": "marcofontaine91@hotmail.com",
+      "pwd": "eeee",
+      "pwdConf": "eeee",
+      "isAdmin": "utente",
+      "id": 21
+    },
+    {
+      "userName": "bibibibi",
+      "email": "odri.fo@gmail.com",
+      "pwd": "1234",
+      "pwdConf": "1234",
+      "isAdmin": "utente",
+      "id": 22
+    },
+    {
+      "userName": "bibibibi",
+      "email": "odri.fo@gmail.com",
+      "pwd": "1234",
+      "pwdConf": "1234",
+      "isAdmin": "utente",
+      "id": 23
+    },
+    {
+      "userName": "mmmm",
+      "email": "ssss@kh.com",
+      "pwd": "1234",
+      "pwdConf": "1234",
+      "isAdmin": "utente",
+      "id": 24
+    },
+    {
+      "userName": "2222",
+      "email": "marcofontaine91@hotmail.com",
+      "pwd": "1234",
+      "pwdConf": "1234",
+      "isAdmin": "utente",
+      "id": 25
+    },
+    {
+      "userName": "2222",
+      "email": "marcofontaine91@hotmail.com",
+      "pwd": "1234",
+      "pwdConf": "1234",
+      "isAdmin": "utente",
+      "id": 26
+    },
+    {
+      "userName": "3333",
+      "email": "ssss@kh.com",
+      "pwd": "333",
+      "pwdConf": "333",
+      "isAdmin": "utente",
+      "id": 27
+    },
+    {
+      "userName": "bibibibi9",
+      "email": "marcofontaine91@hotmail.com",
+      "pwd": "vvvv",
+      "pwdConf": "vvvv",
+      "isAdmin": "utente",
+      "id": 155
+    },
+    {
+      "userName": "2222",
+      "email": "ssss@kh.com",
+      "pwd": "tttt",
+      "pwdConf": "tttt",
+      "isAdmin": "utente",
+      "id": 156
+    }
+  ],
+  "libri": [
+    {
+      "id": 1,
+      "nome": "Sebastian",
+      "cognome": "Eschweiler",
+      "email": "sebastian@codingthesmartway.com",
+      "password": "asdf",
+      "tipo": "utente"
+    },
+    {
+      "id": 2,
+      "nome": "ciccio",
+      "cognome": "blabla",
+      "email": "sebastian@codingthesmartway.com",
+      "password": "asdf",
+      "tipo": "utente"
+    },
+    {
+      "id": 3,
+      "nome": "ciao",
+      "cognome": "bubu",
+      "email": "sebastian@codingthesmartway.com",
+      "password": "asdf",
+      "tipo": "utente"
+    },
+    {
+      "id": 4,
+      "nome": "mario",
+      "cognome": "rossi",
+      "email": "sebastian@codingthesmartway.com",
+      "password": "asdf",
+      "tipo": "utente"
+    }
+  ]
+}

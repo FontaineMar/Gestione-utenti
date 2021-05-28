@@ -1,0 +1,59 @@
+<form  class="row g-3"  (ngSubmit)="onFormUpdate(editUtente.form)" #editUtente="ngForm" let item of utente>
+    
+    <div class="mb-3 col-6">
+        <label for="exampleFormControlInput1" class="form-label">username</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+        minlength="3"[(ngModel)]="utente.userName" name="userName" #userName="ngModel" >
+    </div>
+
+    <div class="mb-3 col-6">
+        <label for="exampleFormControlInput1" class="form-label">email</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" [(ngModel)]="utente.email" name="email" #email="ngModel" >
+    </div>
+
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+        <div *ngIf="email.errors?.required">
+            email non valida </div>
+        <div *ngIf="email.errors?.pattern && email.touched">
+            not god
+        </div>
+    </div>
+<div >
+    <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Password</label>
+        <input type="password"  class="form-control" placeholder="Password" [(ngModel)]="utente.pwd" name="pwd" #pwd="ngModel" >
+    </div>
+    <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Password confirm</label>
+        <input type="password"  class="form-control" placeholder="Password" [(ngModel)]="utente.pwdConf" name="pwdConf" #pwdConf="ngModel">
+    </div>
+    <div *ngIf="(pwd.invalid || pwd != pwdConf) && (pwd.touched)">
+        <div *ngIf="pwd.invalid; else nomacth">
+            password deve avere almeno 8 caratteri
+        </div>
+        <ng-template #nomacth>
+            la password non corrisponde
+        </ng-template>
+    </div>
+    </div>
+    <div class="mb-3 col-6">
+        <label for="exampleFormControlInput1" class="form-label">isAdmin?</label>
+
+        <select class="form-select" aria-label="Default select example" [(ngModel)]="utente.isAdmin" name="isAdmin" #isAdmin="ngModel">
+            <option value="utente">utente</option>
+            <option value="amministratore">amministratore</option>
+           
+        </select>
+    </div>
+
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+    </div>
+    <div class="col-auto">
+        <button type="reset" class="btn btn-primary mb-3">reset identity</button>
+    </div>
+    {{ utente | json }}
+</form>
+
+<div>
+</div>

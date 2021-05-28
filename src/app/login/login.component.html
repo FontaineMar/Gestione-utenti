@@ -1,0 +1,15 @@
+ 
+
+ <form  class="row g-3"  (ngSubmit)="loginEnter()" #loginUtente="ngForm">
+    
+    <div class="mb-3 col-6">
+        <label for="exampleFormControlInput1" class="form-label">username</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+         name="userName" [(ngModel)]="utente.userName">
+    </div>
+    <div class="mb-3 col-6">
+        <label for="exampleFormControlInput1" class="form-label">password</label>
+        <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" [(ngModel)]="utente.pwd"  name="password">
+    </div>
+        <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+</form>
